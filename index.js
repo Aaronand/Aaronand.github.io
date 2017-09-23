@@ -6,13 +6,13 @@ start = function() {
 	isStarted = true;
 	$('.decode').hide();
 	$('.result').show();
-	setTimeout(showDecode, 3000);
+	setTimeout(showDecode, 1000);
 }
 
 showDecode = function(){
 	$('.result').hide();
 	$('.decode').show();
-	setTimeout(jumpToDecode, 3000);
+	setTimeout(jumpToDecode, 1000);
 }
 
 jumpToDecode = function(){
