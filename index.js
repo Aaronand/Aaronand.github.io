@@ -17,7 +17,9 @@ showDecode = function(){
 
 jumpToDecode = function(){
 	var urls = [
-	"http://pic30.nipic.com/20130627/13095351_161912938000_2.jpg", 
+	"https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/1.PNG",
+	"https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/2.PNG", 
+	"https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/3.PNG" 
 	];
 	var jumpTo = urls[parseInt(Math.random() * urls.length)];
 	window.location = jumpTo;
