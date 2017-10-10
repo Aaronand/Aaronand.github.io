@@ -1,5 +1,3 @@
-new Image().src="decode.png";
-new Image().src="234.png";
 var start, showDecode, jumpToDecode, lastTime, lastAcc, isStarted = false;
 
 start = function() {
@@ -16,7 +14,7 @@ showDecode = function(){
 }
 
 jumpToDecode = function(){
-	var url = 
+	var url = "https://aaronand.github.io/result";
 	var jumpTo = url+'?img='+Math.ceil(Math.random()*37).toString();
 	window.location = jumpTo;
 }
