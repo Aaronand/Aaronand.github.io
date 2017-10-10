@@ -16,12 +16,8 @@ showDecode = function(){
 }
 
 jumpToDecode = function(){
-	var urls = [
-	"https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/1.PNG",
-	"https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/2.PNG", 
-	"https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/3.PNG" 
-	];
-	var jumpTo = urls[parseInt(Math.random() * urls.length)];
+	var url = 
+	var jumpTo = url+'?img='+Math.ceil(Math.random()*37).toString();
 	window.location = jumpTo;
 }
 
