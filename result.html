@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>结果页面</title>
@@ -12,11 +13,6 @@
 	100%{
 		background-position: -737px -2px;
 	}
-}
-
-.res = {
-  width: 500px;
-  height: 900px;
 }
 
 body {
@@ -39,7 +35,9 @@ body {
         console.log(getInfo);
         var url = "https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/pic/";
         var img = url + getInfo + ".png";
-        $(".res").attr("src",img); 
+        $(".res").attr({"src":img,
+                        "width": 500px,
+                        "height": 900px,}); 
     </script>
 
 </body>
