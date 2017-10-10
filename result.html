@@ -34,7 +34,8 @@ body {
         var getInfo=window.location.search.slice(window.location.search.lastIndexOf("?")+1);
         console.log(getInfo);
         var url = "https://raw.githubusercontent.com/Aaronand/Aaronand.github.io/master/pic/";
-        $(".res").src = url + getInfo + ".png"; 
+        var img = url + getInfo + ".png";
+        $(".res").attr("src",img); 
     </script>
 
 </body>
