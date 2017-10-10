@@ -15,7 +15,7 @@ showDecode = function(){
 
 jumpToDecode = function(){
 	var url = "https://aaronand.github.io/result";
-	var jumpTo = url+'?img='+Math.ceil(Math.random()*37).toString();
+	var jumpTo = url+'?'+Math.ceil(Math.random()*37).toString();
 	window.location = jumpTo;
 }
 
