@@ -14,28 +14,14 @@ showDecode = function(){
 }
 
 jumpToDecode = function(){
-	var url = "https://aaronand.github.io/result";
+	var url = "result.html";
 	var jumpTo = url+'?'+Math.ceil(Math.random()*37).toString();
 	window.location = jumpTo;
 }
 
 $('body').click(start);
 
-//摇一摇
-$(window).on('deviceorientation', function(e) {
-	if (isStarted) {
-		return true;
-	}
-	if (!lastAcc) {
-		lastAcc = e;
-		return true;
-	}
-	var speed = e.alpha + e.beta + e.gamma - lastAcc.alpha - lastAcc.beta - lastAcc.gamma;
-	if (Math.abs(speed) > 50) {
-		start();
-	}
-	lastAcc = e;
-});
+
 
 // //微信分享  失效了，有时间的可以根据官方公布的 JS-SDK进行开发
 
