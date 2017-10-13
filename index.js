@@ -19,7 +19,7 @@ jumpToDecode = function(){
 	window.location = jumpTo;
 }
 
-$('.do').click(start);
+$('body').click(start);
 
 //摇一摇
 $(window).on('deviceorientation', function(e) {
