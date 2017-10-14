@@ -4,13 +4,13 @@ start = function() {
 	isStarted = true;
 	$('.decode').hide();
 	$('.result').show();
-	setTimeout(showDecode, 1000);
+	showDecode();
 }
 
 showDecode = function(){
 	$('.result').hide();
 	$('.decode').show();
-	setTimeout(jumpToDecode, 1000);
+	setTimeout(jumpToDecode, 100);
 }
 
 jumpToDecode = function(){
@@ -20,29 +20,11 @@ jumpToDecode = function(){
 }
 
 var u = navigator.userAgent;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-alert('是否是Android：'+isAndroid);
-alert('是否是iOS：'+isiOS);
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
 
-$('body').on('touchend',start);
-//$('body').click(start);
+if(isiOS) { $('body').on('touchend',start); }
+else { $('body').click(start); }
 
-//摇一摇
-$(window).on('deviceorientation', function(e) {
-	if (isStarted) {
-		return true;
-	}
-	if (!lastAcc) {
-		lastAcc = e;
-		return true;
-	}
-	var speed = e.alpha + e.beta + e.gamma - lastAcc.alpha - lastAcc.beta - lastAcc.gamma;
-	if (Math.abs(speed) > 50) {
-		start();
-	}
-	lastAcc = e;
-});
 
 // //微信分享  失效了，有时间的可以根据官方公布的 JS-SDK进行开发
 
