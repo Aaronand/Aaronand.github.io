@@ -4,13 +4,13 @@ start = function() {
 	isStarted = true;
 	$('.decode').hide();
 	$('.result').show();
-	setTimeout(showDecode, 1000);
+	setTimeout(showDecode, 0);
 }
 
 showDecode = function(){
 	$('.result').hide();
 	$('.decode').show();
-	setTimeout(jumpToDecode, 1000);
+	setTimeout(jumpToDecode, 0);
 }
 
 jumpToDecode = function(){
@@ -19,6 +19,11 @@ jumpToDecode = function(){
 	window.location = jumpTo;
 }
 
+var u = navigator.userAgent; 
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
+alert('是否是iOS：'+isiOS);
+
+//$('body').('touchend',function);
 $('body').click(start);
 
 
