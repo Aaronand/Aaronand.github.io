@@ -19,6 +19,11 @@ jumpToDecode = function(){
 	window.location = jumpTo;
 }
 
+var u = navigator.userAgent;
+var isiOS = !!u.match(/\(i[^;]+;(U;)?CPU.+Mac OS X/);
+alert('Is iOS?:'+isiOS);
+
+//$('body').on('touchend',function);
 $('body').click(start);
 
 //摇一摇
