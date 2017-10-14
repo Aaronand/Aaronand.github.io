@@ -20,11 +20,13 @@ jumpToDecode = function(){
 }
 
 var u = navigator.userAgent;
-var isiOS = !!u.match(/\(i[^;]+;(U;)?CPU.+Mac OS X/);
-alert('Is iOS?:'+isiOS);
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+alert('是否是Android：'+isAndroid);
+alert('是否是iOS：'+isiOS);
 
-//$('body').on('touchend',function);
-$('body').click(start);
+$('body').on('touchend',start);
+//$('body').click(start);
 
 //摇一摇
 $(window).on('deviceorientation', function(e) {
