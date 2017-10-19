@@ -23,8 +23,8 @@ var u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
 alert('是否是iOS：'+isiOS);
 
-//$('body').('touchend',function);
-$('body').click(start);
+$('body').on('touchend',start);
+//$('body').click(start);
 
 
 
