@@ -21,10 +21,10 @@ jumpToDecode = function(){
 
 var u = navigator.userAgent; 
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
-alert('是否是iOS：'+isiOS);
 
-$('body').on('touchend',start);
-//$('body').click(start);
+if (isiOS) {$('body').on('touchend',start);}
+
+else {$('body').click(start);}
 
 
 // //微信分享  失效了，有时间的可以根据官方公布的 JS-SDK进行开发
