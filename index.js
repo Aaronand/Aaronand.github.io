@@ -27,7 +27,6 @@ $('body').on('touchend',start);
 //$('body').click(start);
 
 
-
 // //微信分享  失效了，有时间的可以根据官方公布的 JS-SDK进行开发
 
 // var shareMeta = {
